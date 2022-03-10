@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>El juego de la vida</title>
+		<style>
+			#universo {
+				min-width: 1000px;
+			}
+			#universo > div {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			#universo > div > div {
+				min-width: 20px;
+				min-height: 20px;
+				border: 1px solid;
+				display: flex;
+			}
+			.viva {
+				background-color: beige;
+			}
+			.muerta {
+				background-color: grey;
+			}
+
+			header {
+				margin-bottom: 20px;
+				padding: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: antiquewhite;
+			}
+			header > * {
+				margin: 10px;
+			}
+			main {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.dibujo_pieza .fila {
+				display: flex;
+			}
+			.dibujo_pieza .celda {
+				width: 20px;
+				height: 20px;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>El juego de la vida</h1>
+			<div class="piezas">
+				<select name="" id="select_piezas"></select>
+			</div>
+			<div class="dibujo_pieza"></div>
+			<input
+				type="number"
+				max="100"
+				min="0"
+				id="porcentaje"
+				value="20"
+				placeholder="Porcentaje de vida"
+			/>
+			<button id="crear">Crear universo</button>
+			<button id="start">Comenzar</button>
+		</header>
+		<main>
+			<div class="app">universo</div>
+		</main>
+
+		<script src="src/piezas.js"></script>
+		<script src="src/juego.js"></script>
+		<script src="src/app.js"></script>
+	</body>
+</html>
